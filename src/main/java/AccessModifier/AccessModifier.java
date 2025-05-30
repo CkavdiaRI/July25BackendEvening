@@ -1,8 +1,8 @@
 package AccessModifier;
 
 public class AccessModifier {
-    private int id;
-    private  int k;
-    private int ae;
-
+    private int age;
+    public String name;
+    protected int value;
+    int id;
 }
