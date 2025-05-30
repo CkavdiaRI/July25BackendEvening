@@ -5,19 +5,37 @@ public class Student {
     String name;
     public int age;
     int studentID;
+    EntranceExam exam;
+    Batch batch;
 
-    // Custom constructor. Not visible to you directly but present only if there is mo custom constructor
+    // Default constructor. Not visible to you directly but present only if there is mo custom constructor
     Student(){
         name = "Chirag";
         age = 100;
         studentID = 11;
+        exam = new EntranceExam(1, "Test");
+    }
+
+//    //Parameterized constructors
+//    Student(String name, int age, int studentID){
+//        this.name = name;
+//        this.age = age;
+//        this.studentID = studentID;
+//    }
+
+    //Parameterized constructors
+    Student(String name, int age){
+        this.name = name;
+        this.age = age;
+        exam = new EntranceExam(1, "Test");
     }
 
     //Parameterized constructors
-    Student(String name, int age, int studentID){
-        this.name = name;
-        this.age = age;
-        this.studentID = studentID;
+    Student(String name1, int age1,  int  studentID1){
+        name = name1;
+        age = age1;
+        studentID = studentID1;
+        exam = new EntranceExam(1, "Test");
     }
 
     //Parameterized constructors
@@ -25,7 +43,20 @@ public class Student {
         this.name = name;
         age = 0;
         studentID = 0;
+        exam = new EntranceExam(1, "Test");
     }
+
+    // copy constructor
+    Student(Student other){
+        name = other.name;
+        age =  other.age;
+        studentID = other.studentID;
+//        exam = other.exam;      // Shallow copy
+//        exam = new EntranceExam(other.exam.examID, other.exam.examName);
+        exam = new EntranceExam(other.exam); // Deep copy //will call copy constructor of EntranceExam class
+        batch = other.batch;
+    }
+
 
     //Behaviours/Methods/Functions
     void submitAssignment(int assignmentID){

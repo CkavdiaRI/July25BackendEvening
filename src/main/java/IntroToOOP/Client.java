@@ -13,7 +13,11 @@ public class Client {
 
         Student s3 = new Student("Jairaj", 120, 101);
 
-        Student s4 = new Student("Srujith");
+        Student s5 = new Student(s1);
+//        s1.name = "Deepak";
+//
+//        Student  s6 = s1;
+//        s6.name = "Deepak";
 
         System.out.println("Hello World !!");
 
