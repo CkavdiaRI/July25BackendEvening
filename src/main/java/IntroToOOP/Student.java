@@ -46,14 +46,17 @@ public class Student {
         exam = new EntranceExam(1, "Test");
     }
 
-    // copy constructor
+    // Deep copy of Student using Copy constructor
     Student(Student other){
+        // 1. Direct copy for primitive and immutable data types.
         name = other.name;
         age =  other.age;
         studentID = other.studentID;
-//        exam = other.exam;      // Shallow copy
-//        exam = new EntranceExam(other.exam.examID, other.exam.examName);
-        exam = new EntranceExam(other.exam); // Deep copy //will call copy constructor of EntranceExam class
+        // exam = other.exam;      // Shallow copy (wrong)
+        // 2. Deep Copy of EntranceExam using parametrized constructor
+        // exam = new EntranceExam(other.exam.examID, other.exam.examName); // Creates new object with same values - but hectic when number of attributes is more
+        // 3. Deep Copy of EntranceExam using Copy constructor
+        exam = new EntranceExam(other.exam); // Creates new object by copying another EntranceExam
         batch = other.batch;
     }
 
