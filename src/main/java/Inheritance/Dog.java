@@ -16,7 +16,6 @@ public class Dog extends Mammals{
         dogName = 10;
     }
 
-
     void bark(){
         System.out.println("Dogs bark !!");
     }
