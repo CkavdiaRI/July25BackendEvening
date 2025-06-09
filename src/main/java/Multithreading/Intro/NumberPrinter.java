@@ -1,4 +1,4 @@
-package IntroToMultithreading;
+package Multithreading.Intro;
 
 // A task that prints a number, assigned via constructor
 public class NumberPrinter implements Runnable {

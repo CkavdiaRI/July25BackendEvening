@@ -1,4 +1,4 @@
-package IntroToMultithreading;
+package Multithreading.Intro;
 
 // A simple class that implements Runnable to define a task
 public class HelloWorldPrinter implements Runnable {

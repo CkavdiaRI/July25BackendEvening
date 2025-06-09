@@ -1,4 +1,4 @@
-package IntroToMultithreading;
+package Multithreading.Intro;
 
 public class Client_NumberPrinter {
     public static void main(String[] args) {

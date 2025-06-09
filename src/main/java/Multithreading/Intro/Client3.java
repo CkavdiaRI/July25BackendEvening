@@ -1,4 +1,4 @@
-package IntroToMultithreading;
+package Multithreading.Intro;
 
 // Custom thread names
 public class Client3 {
