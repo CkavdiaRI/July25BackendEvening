@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 public class BankSimulation {
 
     public static void main(String[] args) throws InterruptedException {
-        BankAccount bankAccount = new BankAccount();
+        BankAccountSol1 bankAccount = new BankAccountSol1();
 
         Runnable depositTask = () -> {
             for (long i = 1; i <= 1000; i++) {

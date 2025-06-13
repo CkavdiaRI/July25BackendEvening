@@ -1,25 +1,25 @@
 package Multithreading.LabSession.BankSimulation;
 
 public class BankAccount {
-    private Long balance = 0L;
+    private long balance = 0L;
 
-    public Long getBalance() {
+    public long getBalance() {
         return balance;
     }
 
-    public void setBalance(Long balance) {
+    public void setBalance(long balance) {
         this.balance = balance;
     }
 
     // TODO: implement this method
-    public void deposit(Long amount) {
+    public void deposit(long amount) {
         if (amount > 0) {
             balance += amount;
         }
     }
 
     // TODO: implement this method
-    public void withdraw(Long amount) {
+    public void withdraw(long amount) {
         if (balance >= amount && amount > 0) {
             balance -= amount;
         }
