@@ -28,7 +28,8 @@ public class ParallelSumArrayProblem {
 
         // Step 3: Create ExecutorService with the number of available cores
         // TODO:
-
+        ExecutorService executor = Executors.newFixedThreadPool(cores);
+        List<Future<Long>> futures = new ArrayList<>();
 
         // Step 4: Divide array into chunks and create tasks
         int chunkSize = size / cores;
@@ -37,19 +38,23 @@ public class ParallelSumArrayProblem {
             int end = (i == cores - 1) ? size : start + chunkSize;
 
             // TODO: Create SumTask instance and submit it to the executor
-
+            SumTask task = new SumTask(array, start, end);
+            Future<Long> future = executor.submit(task);
+            futures.add(future);
         }
 
         // Step 5: Collect results from all chunks
         long totalSum = 0;
         // TODO:
-
+        for (Future<Long> future : futures) {
+            totalSum += future.get(); // This will block until the result is available
+        }
 
         // Step 6: Print final result
         System.out.println("Final sum = " + totalSum);
 
         // Step 7: Shutdown executor
-        //executor.shutdown();
+        executor.shutdown();
     }
 }
 

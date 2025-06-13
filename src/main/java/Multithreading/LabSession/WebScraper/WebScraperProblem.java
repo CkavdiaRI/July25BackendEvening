@@ -22,18 +22,41 @@ public class WebScraperProblem {
         }
 
         // TODO: Call runScraper with newFixedThreadPool
+        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
 
         // TODO: Call runScraper with newCachedThreadPool
+        ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+
+        runScraper(urls, fixedThreadPool, "Fixed Thread Pool");
+        runScraper(urls, cachedThreadPool, "Cached Thread Pool");
 
     }
 
     // TODO: Implement this method to time and run all tasks
     private static void runScraper(List<String> urls, ExecutorService executor, String label)
             throws InterruptedException, ExecutionException {
+
+        long start = System.currentTimeMillis();
+
         // TODO: Create list of Futures
+        List<Future<Void>> futures = new ArrayList<>();
+
         // TODO: Submit ScrapURL tasks to executor
+        for (String url : urls) {
+            futures.add(executor.submit(new ScrapURL(url)));
+        }
+
         // TODO: Wait for all tasks to finish using future.get()
+        for (Future<Void> future : futures) {
+            future.get();
+        }
+
+        long end = System.currentTimeMillis();
+
         // TODO: Print time taken with the given label
+        System.out.println(label + " - Total time taken: " + (end - start) + " ms");
+
         // TODO: Shutdown executor
+        executor.shutdown();
     }
 }
