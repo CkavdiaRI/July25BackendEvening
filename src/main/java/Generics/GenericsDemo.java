@@ -35,11 +35,11 @@ public class GenericsDemo {
         animals.add(new Cat());
         System.out.println("Animals: " + animals);
 
-//        System.out.println("\n== Upper Bounded Wildcard ==");
-//        List<Integer> intList = Arrays.asList(10, 20, 30);
-//        List<Double> doubleList = Arrays.asList(2.5, 3.5);
-//        Utility.sumNumbers(intList);
-//        Utility.sumNumbers(doubleList);
+        System.out.println("\n== Upper Bounded Wildcard ==");
+        List<Integer> intList = Arrays.asList(10, 20, 30);
+        List<Double> doubleList = Arrays.asList(2.5, 3.5);
+        Utility.sumNumbers(intList);
+        Utility.sumNumbers(doubleList);
 //
 //        System.out.println("\n== Lower Bounded Wildcard ==");
 //        List<Number> numbers = new ArrayList<>();

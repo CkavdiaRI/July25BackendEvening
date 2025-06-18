@@ -19,7 +19,7 @@
 
 3. **Implement `Comparable<Item>` Interface:**
     - Learning Resource: [Comparable Interface in Java with Examples - Scaler Topics](https://www.scaler.com/topics/comparable-interface-in-java/)
-    - Write a `compareTo` method to sort items alphabetically by `name`.
+    - Write a `compareTo` method to sort items alphabetically by `price`.
 
 4. **Write a Test Program for Subclasses:**
     - Instantiate a few items for each subclass.
