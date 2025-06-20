@@ -2,6 +2,7 @@ package StreamsAndLambdas.FunctionalInterfaces;
 
 public class CalculatorOperations {
 
+
     // Method to execute operation
     public static int performOperation(int a, int b, Calculator calculator) {
         return calculator.operation(a, b);
