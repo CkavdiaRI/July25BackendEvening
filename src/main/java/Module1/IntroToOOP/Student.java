@@ -13,7 +13,7 @@ public class Student {
         name = "Chirag";
         age = 100;
         studentID = 11;
-        exam = new EntranceExam(1, "Test");
+        exam = new EntranceExam(1, "src/main/Test");
     }
 
 //    //Parameterized constructors
@@ -27,7 +27,7 @@ public class Student {
     Student(String name, int age){
         this.name = name;
         this.age = age;
-        exam = new EntranceExam(1, "Test");
+        exam = new EntranceExam(1, "src/main/Test");
     }
 
     //Parameterized constructors
@@ -35,7 +35,7 @@ public class Student {
         name = name1;
         age = age1;
         studentID = studentID1;
-        exam = new EntranceExam(1, "Test");
+        exam = new EntranceExam(1, "src/main/Test");
     }
 
     //Parameterized constructors
@@ -43,7 +43,7 @@ public class Student {
         this.name = name;
         age = 0;
         studentID = 0;
-        exam = new EntranceExam(1, "Test");
+        exam = new EntranceExam(1, "src/main/Test");
     }
 
     // copy constructor
