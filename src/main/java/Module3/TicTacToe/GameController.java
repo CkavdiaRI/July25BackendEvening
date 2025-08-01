@@ -18,7 +18,7 @@ public class GameController {
     }
 
     public Player checkWinner(Game game) {
-        return game.checkWinner();
+        return game.getWinner();
     }
 
     public void displayBoard(Game game) {

@@ -20,16 +20,16 @@ public class Client {
         winningStrategies.add(new RowWinningStrategy());
 
         Game game = gameController.startNewGame(size, players, winningStrategies);
-        gameController.displayBoard(game);
-        while(gameController.getGameState(game).equals("IN_PROGRESS")) {
+        //gameController.displayBoard(game);
+        while(gameController.getGameState(game).equals(GameState.IN_PROGRESS)) {
             gameController.displayBoard(game);
             gameController.makeMove(game);
         }
 
         // Display the results
-        if(gameController.getGameState(game).equals("SUCCESS")) {
+        if(gameController.getGameState(game).equals(GameState.SUCCESS)) {
             System.out.println("Game Over! The winner is: " + gameController.checkWinner(game).getName());
-        } else if (gameController.getGameState(game).equals("DRAW")) {
+        } else if (gameController.getGameState(game).equals(GameState.DRAW)) {
             System.out.println("Game Over! It's a draw.");
         }
     }
